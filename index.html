@@ -1,0 +1,173 @@
+<!dOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Typing Game Project</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+        
+    </head>
+    <body>
+        <!-- Modal -->
+        <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModal" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="registrationModal">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="first_name" class="form-label">First Name</label>
+                          <input name="first_name" type="text" class="form-control" id="first_name" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                          <label for="last_name" class="form-label">Last Name</label>
+                          <input name="last_name" type="text" class="form-control" id="last_name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary s_save" onclick="saveRegistrationInfo()">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="container s_cont">
+            <section class="s_mysection h-100 border border-5 border-info-subtle rounded-5 s_cont overflow-hidden">
+                <div class="row m-0 h-100">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-9 s_tbdr p-0" style="background-color: #efffd7">
+                            <!-- It is a column1 one of row1 having heading-->
+                            <div class="s_size s_tbdr overflow-hidden p-4"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident voluptatem dicta expedita.
+                            </div>
+                            <!-- It is a column2 of row1 having Keyboard Design-->
+                            <div class="s_keyboard m-3 mt-0 mb-0
+                             s_tbdr s_bg rounded-3">
+                                <div class="s_btn_wrap mb-2 d-lg-flex justify-content-lg-between btn-row1 m-0">
+                                    <button class="btn keyboard-key p-1 s_active">Esc</button>
+                                    <button class="btn keyboard-key p-1">F1</button>
+                                    <button class="btn keyboard-key p-1">F2</button>
+                                    <button class="btn keyboard-key p-1">F3</button>
+                                    <button class="btn keyboard-key p-1">F4</button>
+                                    <button class="btn keyboard-key p-1 ">F5</button>
+                                    <button class="btn keyboard-key p-1">F6</button>
+                                    <button class="btn keyboard-key p-1">F7</button>
+                                    <button class="btn keyboard-key p-1">F8</button>
+                                    <button class="btn keyboard-key p-1">F9</button>
+                                    <button class="btn keyboard-key p-1">F10</button>
+                                    <button class="btn keyboard-key p-1">F11</button>
+                                    <button class="btn keyboard-key p-1">F12</button>
+                                    <button class="btn keyboard-key p-1">PrtScr</button>
+                                    <button class="btn keyboard-key p-1">Insert</button>
+                                    <button class="btn keyboard-key p-1 s_w_custom">Delete</button>
+                                </div>
+                                <div class="s_btn_wrap mb-2 d-lg-flex justify-content-lg-between">
+                                    <button class="btn keyboard-key p-0">~<br>`</button>
+                                    <button class="btn keyboard-key p-0">!<br>1</button>
+                                    <button class="btn keyboard-key p-0">@<br>2</button>
+                                    <button class="btn keyboard-key p-0">#<br>3</button>
+                                    <button class="btn keyboard-key p-0">$<br>4</button>
+                                    <button class="btn keyboard-key p-0">%<br>5</button>
+                                    <button class="btn keyboard-key p-0">^<br>6</button>
+                                    <button class="btn keyboard-key p-0">&amp;<br>7</button>
+                                    <button class="btn keyboard-key p-0">*<br>8</button>
+                                    <button class="btn keyboard-key p-0">(<br>9</button>
+                                    <button class="btn keyboard-key p-0">)<br>0</button>
+                                    <button class="btn keyboard-key p-0">_<br>-</button>
+                                    <button class="btn keyboard-key p-0">+<br>=</button>
+                                    <button class="btn keyboard-key p-0 s_w_custom">Backspace</button>
+                                </div>
+                                <div class="s_btn_wrap mb-2 d-lg-flex justify-content-lg-between">
+                                    <button class="btn keyboard-key p-1 s_w_custom">Tab</button>
+                                    <button class="btn keyboard-key p-1 d_q">Q</button>
+                                    <button class="btn keyboard-key p-1 d_w">W</button>
+                                    <button class="btn keyboard-key p-1 d_e">E</button>
+                                    <button class="btn keyboard-key p-1 d_r">R</button>
+                                    <button class="btn keyboard-key p-1 d_t">T</button>
+                                    <button class="btn keyboard-key p-1 d_y">Y</button>
+                                    <button class="btn keyboard-key p-1 d_u">U</button>
+                                    <button class="btn keyboard-key p-1 d_i">I</button>
+                                    <button class="btn keyboard-key p-1 d_o">O</button>
+                                    <button class="btn keyboard-key p-1 d_p">P</button>
+                                    <button class="btn keyboard-key p-0">{<br>&lbrace;</button>
+                                    <button class="btn keyboard-key p-0">}<br>&rbrace;</button>
+                                    <button class="btn keyboard-key p-0">|<br>\</button>
+                                </div>
+                                <div class="s_btn_wrap mb-2 d-lg-flex justify-content-lg-between">
+                                    <button class="keyboard-key p-1 s_w_custom">Caps Lock</button>
+                                    <button class="btn keyboard-key p-1 d_a">A</button>
+                                    <button class="btn keyboard-key p-1 d_s">S</button>
+                                    <button class="btn keyboard-key p-1 d_d">D</button>
+                                    <button class="btn keyboard-key p-1 d_f">F</button>
+                                    <button class="btn keyboard-key p-1 d_g">G</button>
+                                    <button class="btn keyboard-key p-1 d_h">H</button>
+                                    <button class="btn keyboard-key p-1 d_j">J</button>
+                                    <button class="btn keyboard-key p-1 d_k">K</button>
+                                    <button class="btn keyboard-key p-1 d_l">L</button>
+                                    <button class="btn keyboard-key p-0">:<br>;</button>
+                                    <button class="btn keyboard-key p-0">""<br>'</button>
+                                    <button class="btn keyboard-key p-1 s_w_custom">Enter</button>
+                                </div>
+                                <div class="s_btn_wrap mb-2 d-lg-flex justify-content-lg-between">
+                                    <button class="btn keyboard-key p-1 s_w_custom">Shift</button>
+                                    <button class="btn keyboard-key p-1 d_z">Z</button>
+                                    <button class="btn keyboard-key p-1 d_x">X</button>
+                                    <button class="btn keyboard-key p-1 d_c">C</button>
+                                    <button class="btn keyboard-key p-1 d_v">V</button>
+                                    <button class="btn keyboard-key p-1 d_b">B</button>
+                                    <button class="btn keyboard-key p-1 d_n">N</button>
+                                    <button class="btn keyboard-key p-1 d_m">M</button>
+                                    <button class="btn keyboard-key p-0">&lt;<br>,</button>
+                                    <button class="btn keyboard-key p-0">&gt;<br>.</button>
+                                    <button class="btn keyboard-key p-0">?<br>/</button>
+                                    <button class="btn keyboard-key p-1 s_w_custom">Shift</button>
+                                </div>
+                                <div class="s_btn_wrap mb-2 d-lg-flex justify-content-lg-between">
+                                    <button class="btn keyboard-key p-1">Ctrl</button>
+                                    <button class="btn keyboard-key p-1">Fn</button>
+                                    <button class="btn keyboard-key p-1">Win</button>
+                                    <button class="btn keyboard-key p-1">Alt</button>
+                                    <button class="btn keyboard-key p-1 s_w_custom_space s_space">Space</button>
+                                    <button class="btn keyboard-key p-1">Alt</button>
+                                    <button class="btn keyboard-key p-1">Ctrl</button>
+                                    <button class="btn keyboard-key p-1">&leftarrow;</button>
+                                    <button class="btn keyboard-key p-0">&uparrow;<br>&downarrow;</button>
+                                    <button class="btn keyboard-key p-1">&rightarrow;</button>
+                                </div>  
+                            </div>
+                            <!-- It is a column3 of row1 having hand image-->
+                            <div class="s_hand s_tbdr text-center s_hand_hght position-relative">
+                                <div class="rounded-circle bg-danger s_circle position-absolute s_left_pinky"></div>
+                                <div class="rounded-circle bg-danger s_circle position-absolute s_left_pinky" style="left: 245px; top:45px;"></div>
+                                <div class="rounded-circle bg-danger s_circle position-absolute s_left_pinky" style="left: 280px; top:30px;"></div>
+                                <div class="rounded-circle bg-danger s_circle position-absolute s_left_pinky" style="left: 315px; top:45px;"></div>
+                                <div class="rounded-circle bg-danger s_circle position-absolute s_left_pinky" style="left: 355px; top:150px;"></div>
+                                <div class="rounded-circle bg-danger s_circle position-absolute s_left_pinky" style="left: 420px; top:150px;"></div>
+                                <div class="rounded-circle bg-danger s_circle position-absolute s_left_pinky" style="left: 475px; top:45px;"></div>
+                                <div class="rounded-circle bg-danger s_circle position-absolute s_left_pinky" style="left: 515px; top:30px;"></div>
+                                <div class="rounded-circle bg-danger s_circle position-absolute s_left_pinky" style="left: 550px; top:45px;"></div>
+                                <div class="rounded-circle bg-danger s_circle position-absolute s_left_pinky" style= "left: 590px; top:90px;"></div>
+                                
+                                <img class="img-fluid w-50" src="./img/2.png" alt="">
+                            </div>
+                    </div>
+                    <!-- It is a row2 having Timer  -->
+                    <div class="col-3 s_tbdr" style="background: #D2F597; height: 600px !important;">
+                        <h5 class="mt-5 m-0 s_welcome">Wecome Swati</h5>
+                        <p class="fw-semibold m-0" style="border-bottom-color: #efffd7 !important;">Time</p>
+                        <h1 class="display-3">03:00</h1>
+                        <button class="text-dark fw-bold btn fs-4 w-100 btn-outline-success">Start</button>
+                        <div class="d-grid gap-2">
+                        </div>
+                    </div>
+            </section>
+            
+        </div> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
