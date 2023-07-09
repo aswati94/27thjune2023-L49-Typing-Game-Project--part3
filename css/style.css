@@ -84,20 +84,18 @@
         background-repeat: no-repeat;
         z-index: 10px;
     }
-
-    .l_pinky{
-        left: 215px;
-        top: 90px;
-    }
-
     .s_circle{
         width: 25px;
         height: 25px;
     }
-
     .s_left_pinky{
         left: 215px;
         top: 90px;
         display: none;
     }
 
+    .a_active {
+        background-color: #c6c7c8;
+        transform: translate(2px,2px);
+        box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.9);
+    }

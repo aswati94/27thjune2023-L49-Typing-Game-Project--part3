@@ -27,14 +27,18 @@
 //     });
 //   });
 let saveRegistrationInfo= ()=>{
-    console.timeLog('SWATI');
+    //console.timeLog('SWATI');
     //object.method()
     let fn = document.getElementById("first_name").value;
     let ln = document.getElementById("last_name").value;
+    let dur = document.querySelector(".s_myselect").value;
+
     console.log(fn);
     console.log(ln);
+
     window.localStorage.setItem('first_name',fn);
     window.localStorage.setItem('last_name',ln);
+    window.localStorage.setItem('duration',dur);
     // To reload Page in JavaScript
     window.location.reload();
 }
@@ -44,12 +48,15 @@ let logout= ()=>{
     // To reload Page in JavaScript
     window.location.reload();
 }
-let playSound= ()=>{
+let playSound= (e)=>{
+    // let a = document.querySelector('.s_a');
+    // console.log(a.classList.add('s_active'));
     //console.log('Good Morning');
     let at = document.querySelector('.s_audio');
     at.play();
 
 }
+
 //    ()(); IIFE 
 // On Page Load
 (()=>{
@@ -61,7 +68,7 @@ let playSound= ()=>{
 
     //create a Bootstrap modal instance using the modal element
     var modalInstance = new bootstrap.Modal(modal);
-    
+
     //call the 'show' method on the modal instance to launch the modal
     console.log(fn);
     if(fn === null){
@@ -76,11 +83,212 @@ let playSound= ()=>{
     document.addEventListener('keypress',(e)=>{
         console.log('->',e.keyCode);
         if(e.keyCode == 97){
+            let a = document.querySelector('.s_a');
+            console.log(a.classList.add('a_active'));
             document.querySelector('.l_pinky').style.display = 'block';
         }
+
+          if(e.keyCode == 113) {
+
+            let a = document.querySelector('.s_q');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_pinky').style.display = 'block';
+          }
+
+          if(e.keyCode == 122) {
+
+            let a = document.querySelector('.s_z');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_pinky').style.display = 'block';
+          }
+
+          if(e.keyCode == 119) {
+
+            let a = document.querySelector('.s_w');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_ring').style.display = 'block';
+          }
+
+          if(e.keyCode == 115) {
+
+            let a = document.querySelector('.s_s');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_ring').style.display = 'block';
+          }
+
+          if(e.keyCode == 120) {
+
+            let a = document.querySelector('.s_x');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_ring').style.display = 'block';
+          }
+
+          if(e.keyCode == 101) {
+
+            let a = document.querySelector('.s_e');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_middle').style.display = 'block';
+          }
+
+          if(e.keyCode == 100) {
+
+            let a = document.querySelector('.s_d');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_middle').style.display = 'block';
+          }
+
+          if(e.keyCode == 99) {
+
+            let a = document.querySelector('.s_c');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_middle').style.display = 'block';
+          }
+
+          if(e.keyCode == 114) {
+
+            let a = document.querySelector('.s_r');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_index').style.display = 'block';
+          }
+
+          if(e.keyCode == 102) {
+
+            let a = document.querySelector('.s_f');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_index').style.display = 'block';
+          }
+
+          if(e.keyCode == 118) {
+
+            let a = document.querySelector('.s_v');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_index').style.display = 'block';
+          }
+
+          if(e.keyCode == 116) {
+
+            let a = document.querySelector('.s_t');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_thumb').style.display = 'block';
+          }
+
+          if(e.keyCode == 103) {
+
+            let a = document.querySelector('.s_g');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_thumb').style.display = 'block';
+          }
+
+          if(e.keyCode == 98) {
+
+            let a = document.querySelector('.s_b');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.l_thumb').style.display = 'block';
+          }
+
+          if(e.keyCode == 121) {
+
+            let a = document.querySelector('.s_y');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_thumb').style.display = 'block';
+          }
+
+          if(e.keyCode == 104) {
+
+            let a = document.querySelector('.s_h');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_thumb').style.display = 'block';
+          }
+
+          if(e.keyCode == 110) {
+
+            let a = document.querySelector('.s_n');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_thumb').style.display = 'block';
+          }
+
+          if(e.keyCode == 117) {
+
+            let a = document.querySelector('.s_u');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_index').style.display = 'block';
+          }
+
+          if(e.keyCode == 106) {
+
+            let a = document.querySelector('.s_j');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_index').style.display = 'block';
+          }
+
+          if(e.keyCode == 109) {
+
+            let a = document.querySelector('.s_m');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_index').style.display = 'block';
+          }
+
+          if(e.keyCode == 105) {
+
+            let a = document.querySelector('.s_i');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_middle').style.display = 'block';
+          }
+
+          if(e.keyCode == 107) {
+
+            let a = document.querySelector('.s_k');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_middle').style.display = 'block';
+          }
+
+          if(e.keyCode == 111) {
+
+            let a = document.querySelector('.s_o');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_ring').style.display = 'block';
+          }
+
+          if(e.keyCode == 108) {
+
+            let a = document.querySelector('.s_l');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_ring').style.display = 'block';
+          }
+
+          if(e.keyCode == 112) {
+
+            let a = document.querySelector('.s_p');
+            console.log(a.classList.add('a_active'));
+            document.querySelector('.r_pinky').style.display = 'block';
+          }
         //document  = whole website
         playSound();
     })
-    
-    
+
+    document.addEventListener('keyup', (e)=>{
+        //console.log(e);
+        var elements = document.getElementsByClassName('a_active');
+        //  var elements = document.getElementsByClassName('s_left_pinky');
+        for (var i = 0; i < elements.length; i++){
+           elements[i].classList.remove('a_active');
+         // elements[i].style.display = "none";
+
+        }
+
+      //  document.querySelector('.s_left_pinky').style.display = 'none';
+
+      });
+
+      var s = '';
+      for(var i =1; i<=60; i++)
+      {
+         s = s + `<option value="${i}">${i}</option>`;
+      }
+      
+      console.log(s);
+      console.log(document.querySelector('.s_myselect'));
+      document.querySelector('.s_myselect').innerHTML = s;
+      document.querySelector('.s_myduration').innerHTML = localStorage.getItem('duration') === null ?'': localStorage.getItem('duration')+':00';
+      
 })();
