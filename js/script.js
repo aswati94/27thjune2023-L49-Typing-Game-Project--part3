@@ -31,7 +31,6 @@ let saveRegistrationInfo= ()=>{
     //object.method()
     let fn = document.getElementById("first_name").value;
     let ln = document.getElementById("last_name").value;
-
     console.log(fn);
     console.log(ln);
     window.localStorage.setItem('first_name',fn);
@@ -39,16 +38,20 @@ let saveRegistrationInfo= ()=>{
     // To reload Page in JavaScript
     window.location.reload();
 }
-
 let logout= ()=>{
     // To clear/Logout Page in JavaScript
     window.localStorage.clear();
     // To reload Page in JavaScript
     window.location.reload();
+}
+let playSound= ()=>{
+    //console.log('Good Morning');
+    let at = document.querySelector('.s_audio');
+    at.play();
 
 }
-
 //    ()(); IIFE 
+// On Page Load
 (()=>{
     let fn = window.localStorage.getItem('first_name');
     let ln = window.localStorage.getItem('last_name');
@@ -65,10 +68,19 @@ let logout= ()=>{
         //True
         modalInstance.show();
     }
-
     //check if the local storage is set or not
     if(fn !== null){
         document.querySelector('.s_welcome').innerHTML = 'Welcome '+ fn + " "+ln+'<button class="btn btn-sm btn-danger ms-4" onclick="logout()">Logout</button>';
     }
-
+    //keypress sound play
+    document.addEventListener('keypress',(e)=>{
+        console.log('->',e.keyCode);
+        if(e.keyCode == 97){
+            document.querySelector('.l_pinky').style.display = 'block';
+        }
+        //document  = whole website
+        playSound();
+    })
+    
+    
 })();
